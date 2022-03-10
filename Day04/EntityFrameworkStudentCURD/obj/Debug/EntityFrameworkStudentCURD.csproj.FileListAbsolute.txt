@@ -1,0 +1,16 @@
+F:\ITI PD 9Month\DataSource Manipulation\All Assignments\Day04\EntityFrameworkStudentCURD\bin\Debug\EntityFrameworkStudentCURD.exe.config
+F:\ITI PD 9Month\DataSource Manipulation\All Assignments\Day04\EntityFrameworkStudentCURD\bin\Debug\EntityFrameworkStudentCURD.exe
+F:\ITI PD 9Month\DataSource Manipulation\All Assignments\Day04\EntityFrameworkStudentCURD\bin\Debug\EntityFrameworkStudentCURD.pdb
+F:\ITI PD 9Month\DataSource Manipulation\All Assignments\Day04\EntityFrameworkStudentCURD\obj\Debug\EntityFrameworkStudentCURD.csproj.AssemblyReference.cache
+F:\ITI PD 9Month\DataSource Manipulation\All Assignments\Day04\EntityFrameworkStudentCURD\obj\Debug\EntityFrameworkStudentCURD.csproj.SuggestedBindingRedirects.cache
+F:\ITI PD 9Month\DataSource Manipulation\All Assignments\Day04\EntityFrameworkStudentCURD\obj\Debug\EntityFrameworkStudentCURD.Properties.Resources.resources
+F:\ITI PD 9Month\DataSource Manipulation\All Assignments\Day04\EntityFrameworkStudentCURD\obj\Debug\EntityFrameworkStudentCURD.csproj.GenerateResource.cache
+F:\ITI PD 9Month\DataSource Manipulation\All Assignments\Day04\EntityFrameworkStudentCURD\obj\Debug\EntityFrameworkStudentCURD.csproj.CoreCompileInputs.cache
+F:\ITI PD 9Month\DataSource Manipulation\All Assignments\Day04\EntityFrameworkStudentCURD\obj\Debug\EntityFrameworkStudentCURD.exe
+F:\ITI PD 9Month\DataSource Manipulation\All Assignments\Day04\EntityFrameworkStudentCURD\obj\Debug\EntityFrameworkStudentCURD.pdb
+F:\ITI PD 9Month\DataSource Manipulation\All Assignments\Day04\EntityFrameworkStudentCURD\bin\Debug\EntityFramework.dll
+F:\ITI PD 9Month\DataSource Manipulation\All Assignments\Day04\EntityFrameworkStudentCURD\bin\Debug\EntityFramework.SqlServer.dll
+F:\ITI PD 9Month\DataSource Manipulation\All Assignments\Day04\EntityFrameworkStudentCURD\bin\Debug\EntityFramework.xml
+F:\ITI PD 9Month\DataSource Manipulation\All Assignments\Day04\EntityFrameworkStudentCURD\bin\Debug\EntityFramework.SqlServer.xml
+F:\ITI PD 9Month\DataSource Manipulation\All Assignments\Day04\EntityFrameworkStudentCURD\obj\Debug\EntityFrameworkStudentCURD.csproj.CopyComplete
+F:\ITI PD 9Month\DataSource Manipulation\All Assignments\Day04\EntityFrameworkStudentCURD\obj\Debug\EntityFrameworkStudentCURD.frm_Student.resources

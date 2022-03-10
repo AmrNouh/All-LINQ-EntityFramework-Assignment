@@ -1,0 +1,8 @@
+F:\ITI PD 9Month\DataSource Manipulation\All Assignments\Day03\LinqLAb\bin\Debug\LinqLAb.exe.config
+F:\ITI PD 9Month\DataSource Manipulation\All Assignments\Day03\LinqLAb\bin\Debug\LinqLAb.exe
+F:\ITI PD 9Month\DataSource Manipulation\All Assignments\Day03\LinqLAb\bin\Debug\LinqLAb.pdb
+F:\ITI PD 9Month\DataSource Manipulation\All Assignments\Day03\LinqLAb\obj\Debug\LinqLAb.csproj.AssemblyReference.cache
+F:\ITI PD 9Month\DataSource Manipulation\All Assignments\Day03\LinqLAb\obj\Debug\LinqLAb.csproj.SuggestedBindingRedirects.cache
+F:\ITI PD 9Month\DataSource Manipulation\All Assignments\Day03\LinqLAb\obj\Debug\LinqLAb.csproj.CoreCompileInputs.cache
+F:\ITI PD 9Month\DataSource Manipulation\All Assignments\Day03\LinqLAb\obj\Debug\LinqLAb.exe
+F:\ITI PD 9Month\DataSource Manipulation\All Assignments\Day03\LinqLAb\obj\Debug\LinqLAb.pdb
