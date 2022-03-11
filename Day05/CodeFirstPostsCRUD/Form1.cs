@@ -33,6 +33,7 @@ namespace CodeFirstPostsCRUD
         {
             dgv_Posts.DataSource = socialMediaDB.Posts.Select(p => new { ID = p.id, PostTitle= p.Title, PostBody= p.Body, AuthorName = p.author.Name,BlogTitle = p.blog.Title, ImagePath= p.postImage, PostDateTime= p.PostDateTime }).ToList();
         }
+
         void CreateDataGridViewColumn()
         {
             DataGridViewImageColumn dataGridViewColumn = new DataGridViewImageColumn();
@@ -68,7 +69,7 @@ namespace CodeFirstPostsCRUD
             socialMediaDB.SaveChanges();
             ResetInputsFields();
             ChangeControlStatus(true, false);
-            MessageBox.Show("Student Updated Sucessfully", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Post Updated Sucessfully", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
             FillDataGridView();
 
         }
@@ -101,7 +102,7 @@ namespace CodeFirstPostsCRUD
             post.AutorId = (int)cbAuthors.SelectedValue;
             socialMediaDB.Posts.Add(post);
             socialMediaDB.SaveChanges();
-            MessageBox.Show("Student Saved Sucessfully", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Post Saved Sucessfully", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
             ResetInputsFields();
             FillDataGridView();
         }
@@ -118,7 +119,15 @@ namespace CodeFirstPostsCRUD
 
         private void dgv_Posts_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if (((DataGridView)sender).SelectedCells[dgv_Posts.SelectedCells.Count - 1].ColumnIndex == 8)
+            {
+                int id = (int)dgv_Posts.SelectedRows[0].Cells["ID"].Value;
+                var student = socialMediaDB.Posts.SingleOrDefault(p => p.id == id);
+                socialMediaDB.Posts.Remove(student);
+                socialMediaDB.SaveChanges();
+                MessageBox.Show("Post Deleted Sucessfully", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                FillDataGridView();
+            }
         }
 
 
