@@ -119,7 +119,7 @@ namespace CodeFirstPostsCRUD
 
         private void dgv_Posts_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (((DataGridView)sender).SelectedCells[dgv_Posts.SelectedCells.Count - 1].ColumnIndex == 8)
+            if (((DataGridView)sender).SelectedCells[7].ColumnIndex == 7)
             {
                 int id = (int)dgv_Posts.SelectedRows[0].Cells["ID"].Value;
                 var student = socialMediaDB.Posts.SingleOrDefault(p => p.id == id);
