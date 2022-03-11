@@ -58,7 +58,37 @@ namespace CodeFirstPostsCRUD
 
         private void btn_Update_Click(object sender, EventArgs e)
         {
+            int id = (int)dgv_Posts.SelectedRows[0].Cells["ID"].Value;
+            Post post = socialMediaDB.Posts.SingleOrDefault(p => p.id == id);
+            post.Title = txt_postTitle.Text;
+            post.Body = txt_postBody.Text;
+            post.PostDateTime = pdate.Value;
+            post.BlogId = (int)cbBlogs.SelectedValue;
+            post.AutorId = (int)cbAuthors.SelectedValue;
+            socialMediaDB.SaveChanges();
+            ResetInputsFields();
+            ChangeControlStatus(true, false);
+            MessageBox.Show("Student Updated Sucessfully", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            FillDataGridView();
 
+        }
+
+        private void dgv_Posts_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            ChangeControlStatus( false, true);
+            txt_postTitle.Text = dgv_Posts.SelectedRows[0].Cells["PostTitle"].Value.ToString();
+            txt_postBody.Text = dgv_Posts.SelectedRows[0].Cells["PostBody"].Value.ToString();
+            pdate.Value = (DateTime)dgv_Posts.SelectedRows[0].Cells["PostDateTime"].Value;
+            string authorName = dgv_Posts.SelectedRows[0].Cells["AuthorName"].Value.ToString();
+            cbAuthors.SelectedValue = socialMediaDB.Authors.Where(a => a.Name == authorName).Select(a => a.Id).SingleOrDefault();
+            string blogTitle = dgv_Posts.SelectedRows[0].Cells["BlogTitle"].Value.ToString();
+            cbBlogs.SelectedValue = socialMediaDB.Blogs.Where(b => b.Title == blogTitle).Select(b => b.Id).SingleOrDefault();
+        }
+
+        private void ChangeControlStatus(bool v1, bool v2)
+        {
+            btn_Add.Visible = v1;
+            btn_Update.Visible = v2;
         }
 
         private void btn_Add_Click(object sender, EventArgs e)
@@ -66,15 +96,11 @@ namespace CodeFirstPostsCRUD
             Post post = new Post();
             post.Title = txt_postTitle.Text;
             post.Body = txt_postBody.Text;
-            post.PostDateTime.AddDays(pdate.Value.Day);
-            post.PostDateTime.AddMonths(pdate.Value.Month);
-            post.PostDateTime.AddYears(pdate.Value.Year);
-            post.PostDateTime.AddHours(pPostTime.Value.Hour);
-            post.PostDateTime.AddMinutes(pPostTime.Value.Minute);
-            post.PostDateTime.AddSeconds(pPostTime.Value.Second);
+            post.PostDateTime = pdate.Value;
             post.BlogId = (int)cbBlogs.SelectedValue;
             post.AutorId = (int)cbAuthors.SelectedValue;
             socialMediaDB.Posts.Add(post);
+            socialMediaDB.SaveChanges();
             MessageBox.Show("Student Saved Sucessfully", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
             ResetInputsFields();
             FillDataGridView();
@@ -84,12 +110,9 @@ namespace CodeFirstPostsCRUD
         {
             txt_postTitle.Text = txt_postBody.Text = String.Empty;
             pdate.Value = DateTime.Now;
-            pPostTime.Value.AddHours(DateTime.Now.Hour);
-            pPostTime.Value.AddMinutes(DateTime.Now.Minute);
-            pPostTime.Value.AddSeconds(DateTime.Now.Second);
             cbAuthors.SelectedIndex = 0;
             cbBlogs.SelectedIndex = 0;
-            lblChooseImage.Text = "Choose Post Image";
+            lblChooseImage.Text = "Choose Post Image...";
 
         }
 
@@ -98,10 +121,7 @@ namespace CodeFirstPostsCRUD
 
         }
 
-        private void dgv_Posts_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
 
-        }
 
 
     }

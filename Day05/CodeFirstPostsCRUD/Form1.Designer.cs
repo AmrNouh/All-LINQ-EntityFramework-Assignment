@@ -32,8 +32,6 @@
             this.btn_Add = new System.Windows.Forms.Button();
             this.txt_postBody = new System.Windows.Forms.TextBox();
             this.txt_postTitle = new System.Windows.Forms.TextBox();
-            this.pPostTime = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
             this.pdate = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -66,11 +64,9 @@
             this.splitContainer1.Panel1.Controls.Add(this.cbBlogs);
             this.splitContainer1.Panel1.Controls.Add(this.txt_postBody);
             this.splitContainer1.Panel1.Controls.Add(this.txt_postTitle);
-            this.splitContainer1.Panel1.Controls.Add(this.pPostTime);
             this.splitContainer1.Panel1.Controls.Add(this.lblChooseImage);
             this.splitContainer1.Panel1.Controls.Add(this.label6);
             this.splitContainer1.Panel1.Controls.Add(this.label5);
-            this.splitContainer1.Panel1.Controls.Add(this.label4);
             this.splitContainer1.Panel1.Controls.Add(this.pdate);
             this.splitContainer1.Panel1.Controls.Add(this.label3);
             this.splitContainer1.Panel1.Controls.Add(this.label2);
@@ -112,39 +108,23 @@
             this.txt_postTitle.Size = new System.Drawing.Size(200, 22);
             this.txt_postTitle.TabIndex = 3;
             // 
-            // pPostTime
-            // 
-            this.pPostTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.pPostTime.Location = new System.Drawing.Point(86, 182);
-            this.pPostTime.Name = "pPostTime";
-            this.pPostTime.Size = new System.Drawing.Size(200, 22);
-            this.pPostTime.TabIndex = 2;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 185);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 16);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Time";
-            // 
             // pdate
             // 
-            this.pdate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.pdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.pdate.Location = new System.Drawing.Point(86, 134);
             this.pdate.Name = "pdate";
             this.pdate.Size = new System.Drawing.Size(200, 22);
             this.pdate.TabIndex = 2;
+            this.pdate.Value = new System.DateTime(2022, 3, 11, 0, 0, 0, 0);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(13, 137);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 16);
+            this.label3.Size = new System.Drawing.Size(67, 16);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Date";
+            this.label3.Text = "DateTime";
             // 
             // label2
             // 
@@ -201,7 +181,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 233);
+            this.label5.Location = new System.Drawing.Point(13, 183);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(35, 16);
             this.label5.TabIndex = 1;
@@ -210,7 +190,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 281);
+            this.label6.Location = new System.Drawing.Point(13, 231);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 16);
             this.label6.TabIndex = 1;
@@ -219,7 +199,7 @@
             // cbBlogs
             // 
             this.cbBlogs.FormattingEnabled = true;
-            this.cbBlogs.Location = new System.Drawing.Point(86, 229);
+            this.cbBlogs.Location = new System.Drawing.Point(86, 179);
             this.cbBlogs.Name = "cbBlogs";
             this.cbBlogs.Size = new System.Drawing.Size(200, 24);
             this.cbBlogs.TabIndex = 5;
@@ -227,7 +207,7 @@
             // cbAuthors
             // 
             this.cbAuthors.FormattingEnabled = true;
-            this.cbAuthors.Location = new System.Drawing.Point(86, 277);
+            this.cbAuthors.Location = new System.Drawing.Point(86, 227);
             this.cbAuthors.Name = "cbAuthors";
             this.cbAuthors.Size = new System.Drawing.Size(200, 24);
             this.cbAuthors.TabIndex = 5;
@@ -239,7 +219,7 @@
             // lblChooseImage
             // 
             this.lblChooseImage.AutoSize = true;
-            this.lblChooseImage.Location = new System.Drawing.Point(13, 332);
+            this.lblChooseImage.Location = new System.Drawing.Point(13, 282);
             this.lblChooseImage.Name = "lblChooseImage";
             this.lblChooseImage.Size = new System.Drawing.Size(134, 16);
             this.lblChooseImage.TabIndex = 1;
@@ -275,8 +255,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgv_Posts;
-        private System.Windows.Forms.DateTimePicker pPostTime;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btn_Update;
         private System.Windows.Forms.ComboBox cbAuthors;
         private System.Windows.Forms.ComboBox cbBlogs;
