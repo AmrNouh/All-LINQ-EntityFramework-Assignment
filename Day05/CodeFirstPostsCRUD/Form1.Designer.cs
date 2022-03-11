@@ -38,8 +38,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgv_Posts = new System.Windows.Forms.DataGridView();
             this.btn_Update = new System.Windows.Forms.Button();
+            this.dgv_Posts = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cbBlogs = new System.Windows.Forms.ComboBox();
+            this.cbAuthors = new System.Windows.Forms.ComboBox();
+            this.dlgChoosePostImage = new System.Windows.Forms.OpenFileDialog();
+            this.lblChooseImage = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -55,22 +61,28 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.btn_Add);
+            this.splitContainer1.Panel1.AutoScroll = true;
+            this.splitContainer1.Panel1.Controls.Add(this.cbAuthors);
+            this.splitContainer1.Panel1.Controls.Add(this.cbBlogs);
             this.splitContainer1.Panel1.Controls.Add(this.txt_postBody);
             this.splitContainer1.Panel1.Controls.Add(this.txt_postTitle);
             this.splitContainer1.Panel1.Controls.Add(this.pPostTime);
+            this.splitContainer1.Panel1.Controls.Add(this.lblChooseImage);
+            this.splitContainer1.Panel1.Controls.Add(this.label6);
+            this.splitContainer1.Panel1.Controls.Add(this.label5);
             this.splitContainer1.Panel1.Controls.Add(this.label4);
             this.splitContainer1.Panel1.Controls.Add(this.pdate);
             this.splitContainer1.Panel1.Controls.Add(this.label3);
             this.splitContainer1.Panel1.Controls.Add(this.label2);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
+            this.splitContainer1.Panel1.Controls.Add(this.btn_Add);
             this.splitContainer1.Panel1.Controls.Add(this.btn_Update);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dgv_Posts);
-            this.splitContainer1.Size = new System.Drawing.Size(972, 548);
-            this.splitContainer1.SplitterDistance = 324;
+            this.splitContainer1.Size = new System.Drawing.Size(1449, 548);
+            this.splitContainer1.SplitterDistance = 337;
             this.splitContainer1.TabIndex = 0;
             // 
             // btn_Add
@@ -78,7 +90,7 @@
             this.btn_Add.BackColor = System.Drawing.SystemColors.Highlight;
             this.btn_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Add.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_Add.Location = new System.Drawing.Point(194, 254);
+            this.btn_Add.Location = new System.Drawing.Point(194, 385);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(92, 36);
             this.btn_Add.TabIndex = 4;
@@ -88,7 +100,7 @@
             // 
             // txt_postBody
             // 
-            this.txt_postBody.Location = new System.Drawing.Point(86, 90);
+            this.txt_postBody.Location = new System.Drawing.Point(86, 86);
             this.txt_postBody.Name = "txt_postBody";
             this.txt_postBody.Size = new System.Drawing.Size(200, 22);
             this.txt_postBody.TabIndex = 3;
@@ -103,7 +115,7 @@
             // pPostTime
             // 
             this.pPostTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.pPostTime.Location = new System.Drawing.Point(86, 194);
+            this.pPostTime.Location = new System.Drawing.Point(86, 182);
             this.pPostTime.Name = "pPostTime";
             this.pPostTime.Size = new System.Drawing.Size(200, 22);
             this.pPostTime.TabIndex = 2;
@@ -111,7 +123,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 197);
+            this.label4.Location = new System.Drawing.Point(13, 185);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(38, 16);
             this.label4.TabIndex = 1;
@@ -120,7 +132,7 @@
             // pdate
             // 
             this.pdate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.pdate.Location = new System.Drawing.Point(86, 142);
+            this.pdate.Location = new System.Drawing.Point(86, 134);
             this.pdate.Name = "pdate";
             this.pdate.Size = new System.Drawing.Size(200, 22);
             this.pdate.TabIndex = 2;
@@ -128,7 +140,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 145);
+            this.label3.Location = new System.Drawing.Point(13, 137);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(36, 16);
             this.label3.TabIndex = 1;
@@ -137,7 +149,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 93);
+            this.label2.Location = new System.Drawing.Point(13, 89);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 16);
             this.label2.TabIndex = 1;
@@ -151,6 +163,20 @@
             this.label1.Size = new System.Drawing.Size(33, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Title";
+            // 
+            // btn_Update
+            // 
+            this.btn_Update.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btn_Update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Update.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Update.Location = new System.Drawing.Point(194, 385);
+            this.btn_Update.Name = "btn_Update";
+            this.btn_Update.Size = new System.Drawing.Size(92, 36);
+            this.btn_Update.TabIndex = 4;
+            this.btn_Update.Text = "Update";
+            this.btn_Update.UseVisualStyleBackColor = false;
+            this.btn_Update.Visible = false;
+            this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
             // 
             // dgv_Posts
             // 
@@ -167,33 +193,67 @@
             this.dgv_Posts.ReadOnly = true;
             this.dgv_Posts.RowHeadersWidth = 51;
             this.dgv_Posts.RowTemplate.Height = 24;
-            this.dgv_Posts.Size = new System.Drawing.Size(644, 548);
+            this.dgv_Posts.Size = new System.Drawing.Size(1108, 548);
             this.dgv_Posts.TabIndex = 0;
             this.dgv_Posts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Posts_CellContentClick);
             this.dgv_Posts.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_Posts_RowHeaderMouseDoubleClick);
             // 
-            // btn_Update
+            // label5
             // 
-            this.btn_Update.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btn_Update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Update.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_Update.Location = new System.Drawing.Point(194, 254);
-            this.btn_Update.Name = "btn_Update";
-            this.btn_Update.Size = new System.Drawing.Size(92, 36);
-            this.btn_Update.TabIndex = 4;
-            this.btn_Update.Text = "Update";
-            this.btn_Update.UseVisualStyleBackColor = false;
-            this.btn_Update.Visible = false;
-            this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(13, 233);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 16);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Blog";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(13, 281);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(38, 16);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Autor";
+            // 
+            // cbBlogs
+            // 
+            this.cbBlogs.FormattingEnabled = true;
+            this.cbBlogs.Location = new System.Drawing.Point(86, 229);
+            this.cbBlogs.Name = "cbBlogs";
+            this.cbBlogs.Size = new System.Drawing.Size(200, 24);
+            this.cbBlogs.TabIndex = 5;
+            // 
+            // cbAuthors
+            // 
+            this.cbAuthors.FormattingEnabled = true;
+            this.cbAuthors.Location = new System.Drawing.Point(86, 277);
+            this.cbAuthors.Name = "cbAuthors";
+            this.cbAuthors.Size = new System.Drawing.Size(200, 24);
+            this.cbAuthors.TabIndex = 5;
+            // 
+            // dlgChoosePostImage
+            // 
+            this.dlgChoosePostImage.Filter = "\"Post Image|*.png|All files|*.*\"";
+            // 
+            // lblChooseImage
+            // 
+            this.lblChooseImage.AutoSize = true;
+            this.lblChooseImage.Location = new System.Drawing.Point(13, 332);
+            this.lblChooseImage.Name = "lblChooseImage";
+            this.lblChooseImage.Size = new System.Drawing.Size(134, 16);
+            this.lblChooseImage.TabIndex = 1;
+            this.lblChooseImage.Text = "Choose Post Image...\r\n";
             // 
             // frm_posts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(972, 548);
+            this.ClientSize = new System.Drawing.Size(1449, 548);
             this.Controls.Add(this.splitContainer1);
             this.Name = "frm_posts";
             this.Text = "Posts CRUD";
+            this.Load += new System.EventHandler(this.frm_posts_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -218,6 +278,12 @@
         private System.Windows.Forms.DateTimePicker pPostTime;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btn_Update;
+        private System.Windows.Forms.ComboBox cbAuthors;
+        private System.Windows.Forms.ComboBox cbBlogs;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.OpenFileDialog dlgChoosePostImage;
+        private System.Windows.Forms.Label lblChooseImage;
     }
 }
 
