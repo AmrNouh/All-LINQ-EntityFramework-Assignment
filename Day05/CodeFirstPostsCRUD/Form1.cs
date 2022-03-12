@@ -38,7 +38,6 @@ namespace CodeFirstPostsCRUD
         {
             DataGridViewImageColumn dataGridViewColumn = new DataGridViewImageColumn();
             dataGridViewColumn.Width = 60;
-            dataGridViewColumn.ReadOnly = true;
             dataGridViewColumn.Image = Image.FromFile(@"F:\ITI PD 9Month\DataSource Manipulation\All Assignments\delete.png");
             dgv_Posts.Columns.Add(dataGridViewColumn);
         }
@@ -119,14 +118,14 @@ namespace CodeFirstPostsCRUD
 
         private void dgv_Posts_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (((DataGridView)sender).SelectedCells[7].ColumnIndex == 7)
+            if (((DataGridView)sender).CurrentRow.Cells[7].ColumnIndex == 7)
             {
                 int id = (int)dgv_Posts.SelectedRows[0].Cells["ID"].Value;
                 var student = socialMediaDB.Posts.SingleOrDefault(p => p.id == id);
                 socialMediaDB.Posts.Remove(student);
                 socialMediaDB.SaveChanges();
                 MessageBox.Show("Post Deleted Sucessfully", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                FillDataGridView();
+                FillDataGridView(); 
             }
         }
 

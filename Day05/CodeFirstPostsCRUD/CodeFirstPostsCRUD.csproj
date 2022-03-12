@@ -64,6 +64,12 @@
     <Compile Include="CustomControl\PostControl.Designer.cs">
       <DependentUpon>PostControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomControl\SideMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\SideMenu.Designer.cs">
+      <DependentUpon>SideMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CustomControl\PostControl.resx">
       <DependentUpon>PostControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\SideMenu.resx">
+      <DependentUpon>SideMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

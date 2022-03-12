@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.btn_Add = new System.Windows.Forms.Button();
+            this.cbAuthors = new System.Windows.Forms.ComboBox();
+            this.cbBlogs = new System.Windows.Forms.ComboBox();
             this.txt_postBody = new System.Windows.Forms.TextBox();
             this.txt_postTitle = new System.Windows.Forms.TextBox();
+            this.lblChooseImage = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.pdate = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_Add = new System.Windows.Forms.Button();
             this.btn_Update = new System.Windows.Forms.Button();
             this.dgv_Posts = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cbBlogs = new System.Windows.Forms.ComboBox();
-            this.cbAuthors = new System.Windows.Forms.ComboBox();
             this.dlgChoosePostImage = new System.Windows.Forms.OpenFileDialog();
-            this.lblChooseImage = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -78,21 +78,24 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dgv_Posts);
             this.splitContainer1.Size = new System.Drawing.Size(1449, 548);
-            this.splitContainer1.SplitterDistance = 337;
+            this.splitContainer1.SplitterDistance = 338;
             this.splitContainer1.TabIndex = 0;
             // 
-            // btn_Add
+            // cbAuthors
             // 
-            this.btn_Add.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btn_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Add.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_Add.Location = new System.Drawing.Point(194, 385);
-            this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(92, 36);
-            this.btn_Add.TabIndex = 4;
-            this.btn_Add.Text = "Add";
-            this.btn_Add.UseVisualStyleBackColor = false;
-            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
+            this.cbAuthors.FormattingEnabled = true;
+            this.cbAuthors.Location = new System.Drawing.Point(86, 227);
+            this.cbAuthors.Name = "cbAuthors";
+            this.cbAuthors.Size = new System.Drawing.Size(200, 24);
+            this.cbAuthors.TabIndex = 5;
+            // 
+            // cbBlogs
+            // 
+            this.cbBlogs.FormattingEnabled = true;
+            this.cbBlogs.Location = new System.Drawing.Point(86, 179);
+            this.cbBlogs.Name = "cbBlogs";
+            this.cbBlogs.Size = new System.Drawing.Size(200, 24);
+            this.cbBlogs.TabIndex = 5;
             // 
             // txt_postBody
             // 
@@ -107,6 +110,33 @@
             this.txt_postTitle.Name = "txt_postTitle";
             this.txt_postTitle.Size = new System.Drawing.Size(200, 22);
             this.txt_postTitle.TabIndex = 3;
+            // 
+            // lblChooseImage
+            // 
+            this.lblChooseImage.AutoSize = true;
+            this.lblChooseImage.Location = new System.Drawing.Point(13, 282);
+            this.lblChooseImage.Name = "lblChooseImage";
+            this.lblChooseImage.Size = new System.Drawing.Size(134, 16);
+            this.lblChooseImage.TabIndex = 1;
+            this.lblChooseImage.Text = "Choose Post Image...\r\n";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(13, 231);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(38, 16);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Autor";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(13, 183);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 16);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Blog";
             // 
             // pdate
             // 
@@ -144,6 +174,19 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Title";
             // 
+            // btn_Add
+            // 
+            this.btn_Add.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btn_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Add.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Add.Location = new System.Drawing.Point(194, 385);
+            this.btn_Add.Name = "btn_Add";
+            this.btn_Add.Size = new System.Drawing.Size(92, 36);
+            this.btn_Add.TabIndex = 4;
+            this.btn_Add.Text = "Add";
+            this.btn_Add.UseVisualStyleBackColor = false;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
+            // 
             // btn_Update
             // 
             this.btn_Update.BackColor = System.Drawing.SystemColors.Highlight;
@@ -174,57 +217,14 @@
             this.dgv_Posts.RowHeadersWidth = 51;
             this.dgv_Posts.RowTemplate.Height = 24;
             this.dgv_Posts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Posts.Size = new System.Drawing.Size(1108, 548);
+            this.dgv_Posts.Size = new System.Drawing.Size(1107, 548);
             this.dgv_Posts.TabIndex = 0;
             this.dgv_Posts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Posts_CellContentClick);
             this.dgv_Posts.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_Posts_RowHeaderMouseDoubleClick);
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 183);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 16);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Blog";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 231);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 16);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Autor";
-            // 
-            // cbBlogs
-            // 
-            this.cbBlogs.FormattingEnabled = true;
-            this.cbBlogs.Location = new System.Drawing.Point(86, 179);
-            this.cbBlogs.Name = "cbBlogs";
-            this.cbBlogs.Size = new System.Drawing.Size(200, 24);
-            this.cbBlogs.TabIndex = 5;
-            // 
-            // cbAuthors
-            // 
-            this.cbAuthors.FormattingEnabled = true;
-            this.cbAuthors.Location = new System.Drawing.Point(86, 227);
-            this.cbAuthors.Name = "cbAuthors";
-            this.cbAuthors.Size = new System.Drawing.Size(200, 24);
-            this.cbAuthors.TabIndex = 5;
-            // 
             // dlgChoosePostImage
             // 
             this.dlgChoosePostImage.Filter = "\"Post Image|*.png|All files|*.*\"";
-            // 
-            // lblChooseImage
-            // 
-            this.lblChooseImage.AutoSize = true;
-            this.lblChooseImage.Location = new System.Drawing.Point(13, 282);
-            this.lblChooseImage.Name = "lblChooseImage";
-            this.lblChooseImage.Size = new System.Drawing.Size(134, 16);
-            this.lblChooseImage.TabIndex = 1;
-            this.lblChooseImage.Text = "Choose Post Image...\r\n";
             // 
             // frm_posts
             // 
