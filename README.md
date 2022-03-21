@@ -12,4 +12,6 @@ Projects and Tasks of LINQ = ADO .NET - Entity Framework Courses
 ## Day04 (Entity Framework Database First Mode)
   - Student CURD using EntityFramework
 ## Day05 (Entity Framework Code First Mode)
-  - Posts CURD using EntityFramework
+  - Posts CURD using EF6
+## Day06 (Entity Core Code First Mode)
+  - Posts CURD using Entity Core
